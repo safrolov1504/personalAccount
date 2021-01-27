@@ -1,0 +1,16 @@
+server:
+  port: 8189
+  servlet:
+    context-path: /account
+
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:mem:public;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  thymeleaf:
+    encoding: UTF-8
+
+log4j:
+  rootLogger: DEBUG

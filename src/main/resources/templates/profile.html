@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Личный кабинет</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div th:replace="~{navigation :: navigation(UserInfo)}" />
+    <h4><span class="badge badge-secondary">Личная страница пользователя.</span></h4>
+
+
+    <div class="card">
+        <div class="card-header">
+            Информация о пользователе
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Логин</h5>
+            <p class="card-text" th:text="${user.getName()}"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Имя</h5>
+            <p class="card-text" th:text="${user.getFirstName()}"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Фамилия</h5>
+            <p class="card-text" th:text="${user.getSecondName()}"></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Почта</h5>
+            <p class="card-text" th:text="${user.getEMail()}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
