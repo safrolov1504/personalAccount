@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-//@Builder
 public class User {
     private int id;
     private String name;

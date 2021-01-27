@@ -16,13 +16,6 @@ import java.io.IOException;
 @Component
 public class RestAuthenticationFailureHandler implements AuthenticationFailureHandler {
 
-    private MainController mainController;
-
-    @Autowired
-    public RestAuthenticationFailureHandler(MainController mainController) {
-        this.mainController = mainController;
-    }
-
     @Override
     public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
                                         AuthenticationException e) throws IOException, ServletException {

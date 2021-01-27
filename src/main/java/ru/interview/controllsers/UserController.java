@@ -43,14 +43,7 @@ public class UserController {
                 && request.containsKey("first_name")&& !request.get("first_name").isEmpty()
                 && request.containsKey("second_name")&& !request.get("second_name").isEmpty()) {
             ErrorUser messageBack;
-//            User newUser = User.builder()
-//                    .name(request.get("name"))
-//                    .password(CodingPassword.encodePassword(request.get("password")))
-//                    .eMail(request.get("email"))
-//                    .firstName(request.get("first_name"))
-//                    .secondName(request.get("second_name"))
-//                    .build();
-//
+
             User newUser = new User(request.get("name"),CodingPassword.encodePassword(request.get("password")),
                     request.get("first_name"),request.get("second_name"),request.get("email"));
             try {
